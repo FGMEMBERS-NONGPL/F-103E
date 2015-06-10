@@ -3,7 +3,7 @@ FGUK's  Dassault F-103E ( Mirage III export )
 
 http://fguk.eu/index.php/hangar/viewdownload/8-military-jets/105-dassault-f-103e-mirage-iii-export
 
-![FGUK's IMAGE](http://fguk.eu/index.php/hangar/viewdownload/8-military-jets/105-dassault-f-103e-mirage-iii-export)
+![FGUK's IMAGE](http://www.fguk.eu/images/jdownloads/screenshots/fgfs-screen-0280.png)
 
 This aircraft requires the DAVE PACK available <a href="http://www.fgukmedia.co.uk/index.php/hangar/viewdownload/11-other-objects-and-vehicles/170-davepackupdate">HERE</a>
 
