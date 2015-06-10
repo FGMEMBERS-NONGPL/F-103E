@@ -20,6 +20,16 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
   <startup>
    <splash-texture>Aircraft/F-103E/F-103E-splash.png</splash-texture>
   </startup>
+
+  <systems>
+   <refuel>
+     <contact type="bool">false</contact>
+     <type>boom</type>
+   </refuel>
+    <autopilot>
+         <path>Aircraft/F-4F/Systems/autopilot5.xml</path>
+    </autopilot>
+   </systems>
   
   <sound>
     <path>Aircraft/F-103E/Sounds/MiG-21-sound.xml</path>
@@ -53,11 +63,6 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
 
   <chase-distance-m>-20</chase-distance-m>
 
-  <flaps>
-   <setting>0.000</setting>
-   <setting>0.500</setting> 
-   <setting>1.000</setting> 
-  </flaps>
 
   <help>
    <key>
@@ -81,7 +86,7 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
     <desc>Nose wheel steering</desc>
    </key>
    <key>
-    <name>Space bar</name>
+    <name>e (lower case e)</name>
     <desc>Release selected stores</desc>
    </key>
    <line> </line>
@@ -123,6 +128,9 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
     <intensity type="double">0.3</intensity>
    </gunsight>
   </armament>
+  <gear>
+    <brake-parking type="double">1.0</brake-parking>
+  </gear>
  </controls>
 
  <engines>
@@ -146,14 +154,14 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
    </binding>
   </key>
 
-  <key n="32">
-   <name>SPACE</name>
-   <desc>Release stores</desc>
-    <binding>
-     <command>property-assign</command>
-     <property>fdm/jsbsim/systems/armament/release</property>
-     <value>1</value>
-    </binding>
+    <key n="101">
+     <name>e</name>
+     <desc>Release selected store(s)</desc>
+      <binding>
+       <command>property-assign</command>
+       <property>fdm/jsbsim/systems/armament/release</property>
+       <value>1</value>
+      </binding>
      <mod-up>
        <binding>
         <command>property-assign</command>
@@ -161,7 +169,7 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
         <value>0</value> 
        </binding>
      </mod-up>
-   </key>
+    </key>
 
     <key n="99">
      <name>c</name>
@@ -176,6 +184,12 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
      <name>d</name>
      <desc>Deploy braking chute</desc>
      <binding>
+      <condition>
+       <equals>
+         <property>controls/flight/chute_jettisoned</property>
+         <value>0</value>
+       </equals>
+      </condition>
       <command>property-assign</command>
       <property>fdm/jsbsim/systems/chute/deploy</property>
       <value type="int">1</value>
@@ -196,6 +210,21 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
        <value type="int">1</value>
       </binding>
     </key>
+
+    <key n="115">
+     <name>s</name>
+     <desc>Toggle starter valve.</desc>
+     <binding>
+       <command>property-toggle</command>
+       <property>controls/engines/engine[0]/starter</property>
+     </binding>
+     <mod-up>
+       <binding>
+         <command>null</command>
+       </binding>
+     </mod-up>
+    </key>
+
 
     <key n="109">
      <name>m</name>
@@ -239,9 +268,6 @@ License:  Creative Commons, CC-BY-NC-SA.  See the Reamdme.txt file
        <dump>
          <armed type="double">0</armed>
        </dump>
-       <NWS>
-         <engaged type="double">0</engaged>
-       </NWS>
        <canopy>
          <command type="double">0</command>
          <position type="double">0</position>

@@ -162,8 +162,9 @@
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
-    <spring_coeff unit="LBS/FT">      20720.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC">  4144.00 </damping_coeff>
+    <spring_coeff unit="LBS/FT">       1000.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  4000.00 </damping_coeff>
+    <damping_coeff_rebound unit="LBS/FT/SEC">  100.00 </damping_coeff_rebound>
  </contact>
 
   <contact type="STRUCTURE" name="RIGHT_WING">
@@ -174,8 +175,9 @@
     </location>
     <static_friction>  0.80 </static_friction>
     <dynamic_friction> 0.50 </dynamic_friction>
-    <spring_coeff unit="LBS/FT">      20720.00 </spring_coeff>
-    <damping_coeff unit="LBS/FT/SEC">  4144.00 </damping_coeff>
+    <spring_coeff unit="LBS/FT">       1000.00 </spring_coeff>
+    <damping_coeff unit="LBS/FT/SEC">  4000.00 </damping_coeff>
+    <damping_coeff_rebound unit="LBS/FT/SEC">  100.00 </damping_coeff_rebound>
  </contact>
 
   <contact type="STRUCTURE" name="AFT_FUSELAGE">

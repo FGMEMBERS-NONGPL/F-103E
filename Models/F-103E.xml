@@ -40,6 +40,7 @@
    <x-m>-3.715</x-m>
    <y-m>0.21</y-m>
    <z-m>0.675</z-m>
+   <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
 
@@ -49,6 +50,7 @@
    <x-m>-3.72</x-m>
    <y-m>0.275</y-m>
    <z-m>0.675</z-m>
+   <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
 
@@ -85,6 +87,15 @@
    <x-m>-3.72</x-m>
    <y-m>-0.26</y-m>
    <z-m> 0.625</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/DavePack/Instruments/Gear/park-brake-light.xml</path>
+  <offsets>
+   <x-m>-3.73</x-m>
+   <y-m>-0.24</y-m>
+   <z-m> 0.65</z-m>
   </offsets>
  </model>
 
@@ -148,6 +159,7 @@
    <x-m>-3.72</x-m>
    <y-m> 0.15</y-m>
    <z-m> 0.63</z-m>
+   <pitch-deg>-10.0</pitch-deg>
   </offsets>
  </model>
 
@@ -542,7 +554,7 @@
   <object-name>NoseGearLower</object-name>
   <object-name>LandingLight</object-name>
   <property>sim/multiplay/generic/float[1]</property>
-  <factor>60</factor>
+  <factor>1</factor>
   <center>
    <x-m>-3.58</x-m>
    <y-m>0</y-m>
